@@ -1,22 +1,21 @@
 package ru.hh.tests;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeClass;
 import ru.hh.pages.BasePage;
-import ru.hh.pages.WebBrowser;
 import ru.hh.utils.FilesUtils;
 
-@ContextConfiguration("file:src/test/resources/spring.xml")
+import java.lang.reflect.InvocationTargetException;
+
+//@ContextConfiguration("file:src/test/resources/spring.xml")
 //@ContextConfiguration(locations = { "classpath:spring.xml" })
-public class BaseTest extends AbstractTestNGSpringContextTests {
-    @Autowired
-    private WebBrowser browser;
+//public class BaseTest extends AbstractTestNGSpringContextTests {
+    public class BaseTest{
+    private WebDriver webDriver;
     private String pathConfigProp = "./src/test/resources/config.properties";
 
     @BeforeClass
@@ -34,37 +33,35 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
         switch (FilesUtils.getProperty(pathConfigProp, "webDriver").toUpperCase()) {
             case "CHROME": {
                 System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver");
-                browser.webDriver = new ChromeDriver(chromeOptions);
+                webDriver = new ChromeDriver(chromeOptions);
                 break;
             }
             case "FIREFOX": {
                 System.setProperty("webdriver.firefox.driver", FilesUtils.getProperty(pathConfigProp, "pathWebDriver") + "geckodriver");
-                browser.webDriver = new FirefoxDriver(firefoxOptions);
+                webDriver = new FirefoxDriver(firefoxOptions);
                 break;
             }
             default: {
                 System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver");
-                browser.webDriver = new ChromeDriver(chromeOptions);
+                webDriver = new ChromeDriver(chromeOptions);
                 break;
             }
         }
-
-        browser.baseUrl = FilesUtils.getProperty(pathConfigProp, "baseUrl");
     }
 
-    public <T extends BasePage> T open(Class<T> page, String uri){
-        browser.webDriver.navigate().to(browser.baseUrl+uri);
+    public <T extends BasePage> T getPage(Class<T> page){
         try {
-           return page.newInstance();
+            return page.getConstructor(WebDriver.class).newInstance(webDriver);
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-//    public void open(String uri){
-//        browser.webDriver.navigate().to(browser.baseUrl+uri);
-//    }
 }

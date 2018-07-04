@@ -1,14 +1,22 @@
 package ru.hh.pages;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.openqa.selenium.WebDriver;
 
-@Component
 public class HeaderPage extends BasePage {
-    public String GLOBAL_SEARCH_FIELD = "//input[@data-qa='vacancy-serp__query']";
-    public String GLOBAL_SEARCH_BUTTON="(//button[@data-qa='navi-search__button'])[1]";
+     String GLOBAL_SEARCH_FIELD = "//input[@data-qa='vacancy-serp__query']";
+     String GLOBAL_SEARCH_BUTTON="(//button[@data-qa='navi-search__button'])[1]";
 
-    @Autowired
-    WebBrowser webBrowser;
+    public HeaderPage(WebDriver webDriver) {
+        super(webDriver);
+    }
+
+    public SearchResultsPage clickOnGlobalSearchButton(){
+        clickOn(GLOBAL_SEARCH_BUTTON);
+        return new SearchResultsPage(getWebDriver());
+    }
+
+    public void enterIntoGlobalSearchField(String text){
+        $(GLOBAL_SEARCH_FIELD).sendKeys(text);
+    }
 
 }

@@ -9,62 +9,67 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
 public abstract class BasePage {
-    @Autowired
-    private WebBrowser webBrowser;
+    private WebDriver webDriver;
 
-    public WebBrowser getWebBrowser() {
-        return webBrowser;
+    public BasePage(WebDriver webDriver) {
+        this.webDriver = webDriver;
     }
 
-    public List<WebElement> findAll(String xpath) {
-        return webBrowser.webDriver.findElements(By.xpath(xpath));
+    protected WebDriver getWebDriver() {
+        return webDriver;
     }
 
-    public WebElement findBy(String xpath) {
-        return webBrowser.webDriver.findElement(By.xpath(xpath));
+    protected String open(String url) {
+        webDriver.navigate().to(url);
+        return webDriver.getCurrentUrl();
     }
 
-    public WebElement $(String xpath) {
-        return webBrowser.webDriver.findElement(By.xpath(xpath));
+    protected List<WebElement> findAll(String xpath) {
+        return webDriver.findElements(By.xpath(xpath));
     }
 
-    public List<String> getTexts(String xpath) {
+    protected WebElement findBy(String xpath) {
+        return webDriver.findElement(By.xpath(xpath));
+    }
+
+    protected WebElement $(String xpath) {
+        return webDriver.findElement(By.xpath(xpath));
+    }
+
+    protected List<String> getTexts(String xpath) {
         List<String> textValues = new ArrayList<>();
         findAll(xpath).forEach(webElement -> textValues.add(webElement.getText()));
         return textValues;
     }
 
-    public String getText(String xpath) {
+    protected String getText(String xpath) {
         waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)), 5);
         return findBy(xpath).getText();
     }
 
-    public String getText(String xpath, String keyWordXpath) {
+    protected String getText(String xpath, String keyWordXpath) {
         return getText(xpath.replace("$KeyWord", keyWordXpath));
     }
 
-    public void clickOnJS(String xpath) {
-        ((JavascriptExecutor) webBrowser.webDriver).executeScript("arguments[0].click();", findBy(xpath));
+    protected void clickOnJS(String xpath) {
+        ((JavascriptExecutor) webDriver).executeScript("arguments[0].click();", findBy(xpath));
     }
 
-    public void scrollIntoView(String xpath, int offset_y) {
-        int y = webBrowser.webDriver.findElement(By.xpath(xpath)).getLocation().getY() + offset_y;
-        ((JavascriptExecutor) webBrowser.webDriver).executeScript("window.scrollTo(0, " + y + ")");
+    protected void scrollIntoView(String xpath, int offset_y) {
+        int y = webDriver.findElement(By.xpath(xpath)).getLocation().getY() + offset_y;
+        ((JavascriptExecutor) webDriver).executeScript("window.scrollTo(0, " + y + ")");
     }
 
-    public void scrollIntoView(String xpath) {
-        ((JavascriptExecutor) webBrowser.webDriver).executeScript("window.scrollTo(0, 0)");
+    protected void scrollIntoView(String xpath) {
+        ((JavascriptExecutor) webDriver).executeScript("window.scrollTo(0, 0)");
     }
 
-    public void clickOn(String xpath) {
+    protected void clickOn(String xpath) {
         waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)), 5);
         scrollIntoView(xpath, -100);
         moveTo($(xpath));
@@ -72,15 +77,15 @@ public abstract class BasePage {
         $(xpath).click();
     }
 
-    public void clickOn(String xpath, String keyWordXpath) {
+    protected void clickOn(String xpath, String keyWordXpath) {
         clickOn(xpath.replace("$KeyWord", keyWordXpath));
     }
 
     protected <V> V waitFor(Function<? super WebDriver, V> condition, int secTimeout) {
-        return (new WebDriverWait(webBrowser.webDriver, secTimeout)).until(condition);
+        return (new WebDriverWait(webDriver, secTimeout)).until(condition);
     }
 
-    public void sendKeys(String xpath, String value) {
+    protected void sendKeys(String xpath, String value) {
         waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)), 5);
         scrollIntoView(xpath);
         waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)), 3);
@@ -88,23 +93,23 @@ public abstract class BasePage {
         $(xpath).sendKeys(value);
     }
 
-    public String switchToLustWindow() {
-        webBrowser.webDriver.getWindowHandles().forEach(wh -> webBrowser.webDriver
+    protected String switchToLustWindow() {
+        webDriver.getWindowHandles().forEach(wh -> webDriver
                 .switchTo().window(wh));
-        return webBrowser.webDriver.getCurrentUrl();
+        return webDriver.getCurrentUrl();
     }
 
-    public void moveTo(WebElement webElement) {
-        Actions actions = new Actions(webBrowser.webDriver);
+    protected void moveTo(WebElement webElement) {
+        Actions actions = new Actions(webDriver);
         actions.moveToElement(webElement).perform();
     }
 
-    public String getAttribute(String xpath, String attribute) {
+    protected String getAttribute(String xpath, String attribute) {
         return $(xpath).getAttribute(attribute);
     }
 
 
-    public void selectFromDropDownByValue(String xpath, String value) {
+    protected void selectFromDropDownByValue(String xpath, String value) {
         Select select = new Select($(xpath));
         select.selectByValue(value);
     }

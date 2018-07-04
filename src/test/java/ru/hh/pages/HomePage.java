@@ -1,13 +1,17 @@
 package ru.hh.pages;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.openqa.selenium.WebDriver;
+import ru.hh.utils.FilesUtils;
 
-@Component
 public class HomePage extends HeaderPage {
-@Autowired
-    WebBrowser webBrowser;
 
+    public HomePage(WebDriver webDriver){
+        super(webDriver);
+    }
 
-
+    public HomePage open(){
+        String pathConfigProp = "./src/test/resources/config.properties";
+        open(FilesUtils.getProperty(pathConfigProp, "baseUrl"));
+        return this;
+    }
 }

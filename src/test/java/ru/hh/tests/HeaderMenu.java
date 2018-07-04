@@ -1,6 +1,5 @@
 package ru.hh.tests;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.hh.pages.HomePage;
@@ -17,9 +16,9 @@ public class HeaderMenu extends BaseTest{
     public void check111111111GlobalSearchFunctionality() {
         HomePage homePage;
         SearchResultsPage searchResultsPage;
-        homePage.open("");
-        homePage.clickOn(homePage.GLOBAL_SEARCH_BUTTON);
-        Assert.assertEquals("22",searchResultsPage.getVacancyBlockAmount());
+        homePage=getPage(HomePage.class);
+        searchResultsPage=homePage.open().clickOnGlobalSearchButton();
+        Assert.assertEquals(searchResultsPage.getVacancyBlockAmount(),"25");
     }
 
 
