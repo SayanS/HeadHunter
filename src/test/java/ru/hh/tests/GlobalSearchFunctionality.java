@@ -1,23 +1,25 @@
 package ru.hh.tests;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.hh.pages.HomePage;
-
-//@ContextConfiguration("file:src/test/resources/spring.xml")
-
+import ru.hh.pages.SearchResultsPage;
 
 public class GlobalSearchFunctionality extends BaseTest {
     @Autowired
-    private HomePage homePage;
+    HomePage homePage;
+    @Autowired
+    SearchResultsPage searchResultsPage;
 
     @Test(enabled = true)
     public void checkGlobalSearchFunctionality() {
-        HomePage z;
-        z=homePage.open();
-                z.clickOn(homePage.GLOBAL_SEARCH_BUTTON);
+        homePage.open("");
+        homePage.clickOn(homePage.GLOBAL_SEARCH_BUTTON);
+        Assert.assertEquals("21",searchResultsPage.getVacancyBlockAmount());
 
-        int i=0;
+
+        int i = 0;
     }
 
 }

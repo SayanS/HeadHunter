@@ -10,30 +10,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Component
 public abstract class BasePage {
     @Autowired
     private WebBrowser webBrowser;
 
-
     public WebBrowser getWebBrowser() {
         return webBrowser;
-    }
-
-    public <T extends BasePage> T open(Class<T> page, String uri){
-        getWebBrowser().webDriver.navigate().to(getWebBrowser().baseUrl+uri);
-        try {
-            return page.newInstance();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
     public List<WebElement> findAll(String xpath) {
@@ -120,4 +108,6 @@ public abstract class BasePage {
         Select select = new Select($(xpath));
         select.selectByValue(value);
     }
+
+
 }

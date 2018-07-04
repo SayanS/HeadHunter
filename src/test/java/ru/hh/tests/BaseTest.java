@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeClass;
+import ru.hh.pages.BasePage;
 import ru.hh.pages.WebBrowser;
 import ru.hh.utils.FilesUtils;
 
@@ -51,4 +52,19 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
         browser.baseUrl = FilesUtils.getProperty(pathConfigProp, "baseUrl");
     }
 
+    public <T extends BasePage> T open(Class<T> page, String uri){
+        browser.webDriver.navigate().to(browser.baseUrl+uri);
+        try {
+           return page.newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+//    public void open(String uri){
+//        browser.webDriver.navigate().to(browser.baseUrl+uri);
+//    }
 }
