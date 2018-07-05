@@ -1,11 +1,13 @@
 package ru.hh.tests;
 
+import io.restassured.RestAssured;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import ru.hh.pages.BasePage;
 import ru.hh.utils.FilesUtils;
 
@@ -16,7 +18,6 @@ import java.lang.reflect.InvocationTargetException;
 //public class BaseTest extends AbstractTestNGSpringContextTests {
     public class BaseTest{
     private WebDriver webDriver;
-    private String pathConfigProp = "./src/test/resources/config.properties";
 
     @BeforeClass
     public void setUp() {
@@ -30,19 +31,19 @@ import java.lang.reflect.InvocationTargetException;
         firefoxOptions.addArguments("--start-maximized");
         firefoxOptions.setCapability("marionette", true);
 
-        switch (FilesUtils.getProperty(pathConfigProp, "webDriver").toUpperCase()) {
+        switch (FilesUtils.getConfigProperty("webDriver").toUpperCase()) {
             case "CHROME": {
-                System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver");
+                System.setProperty("webdriver.chrome.driver", FilesUtils.getConfigProperty("pathWebDriver"));
                 webDriver = new ChromeDriver(chromeOptions);
                 break;
             }
             case "FIREFOX": {
-                System.setProperty("webdriver.firefox.driver", FilesUtils.getProperty(pathConfigProp, "pathWebDriver") + "geckodriver");
+                System.setProperty("webdriver.firefox.driver", FilesUtils.getConfigProperty("pathWebDriver"));
                 webDriver = new FirefoxDriver(firefoxOptions);
                 break;
             }
             default: {
-                System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver");
+                System.setProperty("webdriver.chrome.driver", FilesUtils.getConfigProperty("pathWebDriver"));
                 webDriver = new ChromeDriver(chromeOptions);
                 break;
             }
@@ -62,6 +63,13 @@ import java.lang.reflect.InvocationTargetException;
             e.printStackTrace();
         }
         return null;
+    }
+
+    @BeforeSuite(alwaysRun = true)
+    public void configure() {
+        RestAssured.baseURI = FilesUtils.getConfigProperty("baseUri");
+        //RestAssured.port = 8080;
+//        RestAssured.basePath = "/books";
     }
 
 }
