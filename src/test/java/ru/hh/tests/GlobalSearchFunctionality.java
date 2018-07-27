@@ -1,45 +1,41 @@
 package ru.hh.tests;
 
-import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ru.hh.api.EndPoints;
-import ru.hh.api.RestAssuredConfiguration;
+import ru.hh.api.ApiUtils;
 import ru.hh.pages.HomePage;
 import ru.hh.pages.SearchResultsPage;
 
+import java.util.Arrays;
 import java.util.regex.Pattern;
-
-import static io.restassured.RestAssured.given;
 
 public class GlobalSearchFunctionality extends BaseTest {
 
     @Test(enabled = true)
-    public void isVacancyDescriptionContainsAnyWordOfSearchText() {
+    public void isVacancyTitleOrDescriptionContainsAnyWordOfSearchText() {
         String searchText = "QA Automation";
         HomePage homePage = getPage(HomePage.class).open();
         homePage.enterIntoGlobalSearchField(searchText);
         SearchResultsPage searchResultsPage = homePage.clickOnGlobalSearchButton();
 
-
-        RequestSpecification requestSpecification = new RestAssuredConfiguration().getRequestSpecification();
-
         searchResultsPage.getVacancyIdListOfActivePage().forEach(id -> {
-            String description;
+            String vacancyDescription;
             Boolean flag=false;
-            Pattern p = Pattern.compile("(<)(.*?)(>)");
-            description = String.join("", p.split(given().spec(requestSpecification)
-                    .get(EndPoints.GET_VACANCIES + "/" + id)
-                    .getBody()
-                    .jsonPath().get("description").toString()));
+
+            Pattern htmlTagPattern = Pattern.compile("(<)(.*?)(>)");
+            vacancyDescription = String.join("", htmlTagPattern.split(ApiUtils.getVacancyValueOf(id,"description")));
+
             String expectedTexts[] = searchText.split(" ");
+
             for (int i = 0; i <= expectedTexts.length - 1; i++) {
-               if(description.contains(expectedTexts[i])){
+               if((searchResultsPage.getVacancyTitle(id)+vacancyDescription).contains(expectedTexts[i])){
                    flag=true;
+                   break;
                }
             }
-            Assert.assertTrue(flag, description +"\n of vacancy id="+id +"\n isn't contains any word from\n"+searchText);
+            Assert.assertTrue(flag, vacancyDescription +"\n of vacancy id="+id +"\n isn't contains any word from\n"+ Arrays.toString(expectedTexts));
         });
     }
+
 
 }
