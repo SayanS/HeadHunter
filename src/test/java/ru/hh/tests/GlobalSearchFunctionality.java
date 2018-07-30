@@ -37,5 +37,4 @@ public class GlobalSearchFunctionality extends BaseTest {
         });
     }
 
-
 }
