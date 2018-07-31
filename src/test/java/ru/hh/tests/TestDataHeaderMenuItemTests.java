@@ -22,9 +22,9 @@ public class TestDataHeaderMenuItemTests extends BaseTest {
             Map<String, List<TestDataHeaderMenuItem>> testDataHeaderMenu = (new ObjectMapper()).readValue(new File("./src/test/resources/data/headerMenuItems.json"), new TypeReference<Map<String, List<TestDataHeaderMenuItem>>>() {
             });
             List<TestDataHeaderMenuItem> testDataHeaderMenuItem = testDataHeaderMenu.get(FilesUtils.getConfigProperty("localization"));
-            result = new TestDataHeaderMenuItem [1][testDataHeaderMenuItem.size()];
+            result = new Object[testDataHeaderMenuItem.size()][1];
             for (int i = 0; i < testDataHeaderMenuItem.size(); i++) {
-                result[0][i] = testDataHeaderMenuItem.get(i);
+                result[i][0] = testDataHeaderMenuItem.get(i);
             }
             int i=0;
         } catch (IOException e) {
