@@ -1,258 +1,516 @@
-[
-  {
-    "русский": [
-      {
-        "menuItemName": "Ищу работу",
-        "optionsNameOfInternalLinks": [
-          {
-            "subItemName": "Создать резюме",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Пройти профориентацию",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Получить карьерную консультацию",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Заказать готовое резюме",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          }
-        ],
-        "optionsNameOfExternalLinks": [
-          {
-            "subItemName": "Учиться в Академии",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          }
-        ]
-      },
-      {
-        "menuItemName": "Ищу сотрудников",
-        "optionsNameOfInternalLinks": [
-          {
-            "subItemName": "Разместить вакансию",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Прайс лист",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Описание услуг",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          }
-        ],
-        "optionsNameOfExternalLinks": []
-      },
-      {
-        "menuItemName": "Помощь",
-        "optionsNameOfInternalLinks": [
-          {
-            "subItemName": "Виртуальный консультант",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Пишите нам",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          }
-        ],
-        "optionsNameOfExternalLinks": [
-          {
-            "subItemName": "Сообщество поддержки",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          }
-        ]
-      },
-      {
-        "menuItemName": "Компании",
-        "optionsNameOfInternalLinks": [
-          {
-            "subItemName": "Каталог компаний",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Работа по профессиям",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Работа рядом с метро",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          }
-        ],
-        "optionsNameOfExternalLinks": [
-        ]
-      },
-      {
-        "menuItemName": "Проекты",
-        "optionsNameOfInternalLinks": [
-          {
-            "subItemName": "optionsNameOfInternalLinks",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Работа для подростков 14-17 лет",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "HR-брендинг",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Индекс HeadHunter",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Оценка талантов",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Аутплейсмент",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Мобильное приложение",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Обучающие вебинары",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Жизнь в компании",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Библиотека HeadHunter",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "ИТ-проекты",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Полезная информация",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          }
-        ],
-        "optionsNameOfExternalLinks": [
-          {
-            "subItemName": "optionsNameOfExternalLinks",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Карьера для молодых специалистов",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Саммит HR Digital",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Премия HR-бренд",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Люди в цифрах",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Реестр кадровых агентств",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Академия",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Академия для бизнеса",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Clickme",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Talantix",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "HRspace",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Карьерный консультант",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Школа программистов",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Виджеты и API",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Банк данных заработных плат",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "Рейтинг факультетов и вузов",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          },
-          {
-            "subItemName": "StaffStation",
-            "expectedURL": "",
-            "expectedPageTitle": ""
-          }
-        ]
-      }
-    ]
-  }
-]
+
+{
+  "Russian": [
+    {
+      "menuItemName": "Ищу работу",
+      "optionsNameOfInternalLinks": [
+        {
+          "subItemName": "Создать резюме",
+          "expectedURL": "/account/login?postponed&backurl=/applicant/resumes/new",
+          "expectedPageTitle": "Вход в личный кабинет"
+        },
+        {
+          "subItemName": "Пройти профориентацию",
+          "expectedURL": "/article/proforientation_promo?from=menunelogin",
+          "expectedPageTitle": "Найди свое призвание в онлайн-тесте «Профориентация»"
+        },
+        {
+          "subItemName": "Получить карьерную консультацию",
+          "expectedURL": "/career-vector?from=menunelogin",
+          "expectedPageTitle": "Карьерный вектор"
+        },
+        {
+          "subItemName": "Заказать готовое резюме",
+          "expectedURL": "/article/expert_resume?from=menunelogin",
+          "expectedPageTitle": "Сервис «Готовое резюме»"
+        }
+      ],
+      "optionsNameOfExternalLinks": [
+        {
+          "subItemName": "Учиться в Академии",
+          "expectedURL": "http://academy.hh.ru/",
+          "expectedPageTitle": "Сервис «Готовое резюме»"
+        }
+      ]
+    },
+    {
+      "menuItemName": "Ищу сотрудников",
+      "optionsNameOfInternalLinks": [
+        {
+          "subItemName": "Разместить вакансию",
+          "expectedURL": "/auth/employer?backurl=/employer/vacancy/create",
+          "expectedPageTitle": "Регистрация работодателя"
+        },
+        {
+          "subItemName": "Прайс лист",
+          "expectedURL": "/price",
+          "expectedPageTitle": "Покупка услуг"
+        },
+        {
+          "subItemName": "Описание услуг",
+          "expectedURL": "/article/services",
+          "expectedPageTitle": "Доступ к базе резюме"
+        }
+      ],
+      "optionsNameOfExternalLinks": []
+    },
+    {
+      "menuItemName": "Помощь",
+      "optionsNameOfInternalLinks": [
+        {
+          "subItemName": "Виртуальный консультант",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Пишите нам",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        }
+      ],
+      "optionsNameOfExternalLinks": [
+        {
+          "subItemName": "Сообщество поддержки",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        }
+      ]
+    },
+    {
+      "menuItemName": "Компании",
+      "optionsNameOfInternalLinks": [
+        {
+          "subItemName": "Каталог компаний",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Работа по профессиям",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Работа рядом с метро",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        }
+      ],
+      "optionsNameOfExternalLinks": [
+      ]
+    },
+    {
+      "menuItemName": "Проекты",
+      "optionsNameOfInternalLinks": [
+        {
+          "subItemName": "optionsNameOfInternalLinks",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Работа для подростков 14-17 лет",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "HR-брендинг",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Индекс HeadHunter",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Оценка талантов",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Аутплейсмент",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Мобильное приложение",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Обучающие вебинары",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Жизнь в компании",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Библиотека HeadHunter",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "ИТ-проекты",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Полезная информация",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        }
+      ],
+      "optionsNameOfExternalLinks": [
+        {
+          "subItemName": "optionsNameOfExternalLinks",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Карьера для молодых специалистов",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Саммит HR Digital",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Премия HR-бренд",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Люди в цифрах",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Реестр кадровых агентств",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Академия",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Академия для бизнеса",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Clickme",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Talantix",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "HRspace",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Карьерный консультант",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Школа программистов",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Виджеты и API",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Банк данных заработных плат",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Рейтинг факультетов и вузов",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "StaffStation",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        }
+      ]
+    }
+  ],
+  "English": [
+    {
+      "menuItemName": "Looking for a job",
+      "optionsNameOfInternalLinks": [
+        {
+          "subItemName": "Создать резюме",
+          "expectedURL": "/account/login?postponed&backurl=/applicant/resumes/new",
+          "expectedPageTitle": "Вход в личный кабинет"
+        },
+        {
+          "subItemName": "Пройти профориентацию",
+          "expectedURL": "/article/proforientation_promo?from=menunelogin",
+          "expectedPageTitle": "Найди свое призвание в онлайн-тесте «Профориентация»"
+        },
+        {
+          "subItemName": "Получить карьерную консультацию",
+          "expectedURL": "/career-vector?from=menunelogin",
+          "expectedPageTitle": "Карьерный вектор"
+        },
+        {
+          "subItemName": "Заказать готовое резюме",
+          "expectedURL": "/article/expert_resume?from=menunelogin",
+          "expectedPageTitle": "Сервис «Готовое резюме»"
+        }
+      ],
+      "optionsNameOfExternalLinks": [
+        {
+          "subItemName": "Учиться в Академии",
+          "expectedURL": "http://academy.hh.ru/",
+          "expectedPageTitle": "Сервис «Готовое резюме»"
+        }
+      ],
+      "optionsNameOfExternalLinks": [
+        {
+          "subItemName": "",
+          "expectedURL": "http://academy.hh.ru/",
+          "expectedPageTitle": ""
+        }
+      ]
+    },
+    {
+      "menuItemName": "Looking for employees",
+      "optionsNameOfInternalLinks": [
+        {
+          "subItemName": "",
+          "expectedURL": "/auth/employer?backurl=/employer/vacancy/create",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "/price",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "/article/services",
+          "expectedPageTitle": ""
+        }
+      ],
+      "optionsNameOfExternalLinks": []
+    },
+    {
+      "menuItemName": "Help",
+      "optionsNameOfInternalLinks": [
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        }
+      ],
+      "optionsNameOfExternalLinks": [
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        }
+      ]
+    },
+    {
+      "menuItemName": "Companies",
+      "optionsNameOfInternalLinks": [
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        }
+      ],
+      "optionsNameOfExternalLinks": [
+      ]
+    },
+    {
+      "menuItemName": "Projects",
+      "optionsNameOfInternalLinks": [
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "r",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        }
+      ],
+      "optionsNameOfExternalLinks": [
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Clickme",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "Talantix",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "HRspace",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        },
+        {
+          "subItemName": "StaffStation",
+          "expectedURL": "",
+          "expectedPageTitle": ""
+        }
+      ]
+    }
+  ]
+}
+
 
 
 

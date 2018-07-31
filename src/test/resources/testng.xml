@@ -4,7 +4,7 @@
     <test name="Global Search">
         <classes>
             <class name="ru.hh.tests.GlobalSearchFunctionality"/>
-            <class name="ru.hh.tests.HeaderMenuItem"/>
+            <class name="ru.hh.tests.TestDataHeaderMenuItemTests"/>
         </classes>
     </test>
 
